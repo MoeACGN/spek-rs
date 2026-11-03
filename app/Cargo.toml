@@ -1,0 +1,19 @@
+[package]
+name = "spek"
+version = "1.5.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "Spek acoustic spectrum analyser"
+build = "build.rs"
+
+[[bin]]
+name = "spek"
+path = "src/main.rs"
+
+[dependencies]
+spek-core = { path = "../core" }
+eframe = { version = "0.32", default-features = false, features = ["default_fonts", "glow", "x11"] }
+image = { version = "0.25", default-features = false, features = ["png"] }
+log = "0.4"
+ab_glyph = "0.2"
+ttf-parser = "0.25"

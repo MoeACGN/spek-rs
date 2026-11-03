@@ -1,0 +1,14 @@
+[package]
+name = "spek-core"
+version = "1.5.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "Spectrogram engine for Spek: FFmpeg decode, rustfft"
+
+[dependencies]
+realfft = "3"
+rustfft = "6"
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[build-dependencies]
+cc = "1"

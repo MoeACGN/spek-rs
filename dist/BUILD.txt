@@ -1,0 +1,17 @@
+Spek 1.5.0
+Windows x64，Windows 10 或更新版本
+介面：egui + OpenGL（系統的 opengl32.dll）
+解碼：靜態連結的 FFmpeg 9，可設定執行緒數
+頻譜：rustfft。解碼與視窗縮放重算時，會先畫出已經完成的部分
+進度條浮在畫面上方正中，畫完即消失，不會把選單往下推。
+選單位置固定，不隨視窗縮放換行。
+存圖依畫面倍率（0.5x–8x）重算頻譜，並附上頻率、dB、時間、聲道、編碼與計算方式。
+字形：內嵌 Adobe 思源黑體 Source Han Sans TC（Traditional Chinese—Taiwan，OFL 1.1）。
+缺少的字依序改用系統的微軟正黑體、新細明體。
+解碼執行緒預設為高效能實體核心數（有 P／E 核心時不含 E 核心），可在工具列修改。
+第三方函式庫全部靜態連結。執行檔只連到 Windows 內建 DLL
+（ucrtbase、opengl32、bcrypt、comdlg32 等），沒有需要另外安裝的 DLL。
+載入設定：IMAGE_GUARD_SECURITY_COOKIE_UNUSED，子系統版本 10.0
+
+解壓後執行 Spek\spek.exe。
+若仍然一閃即逝，同一個資料夾會出現 spek.log，也會跳出錯誤視窗。
